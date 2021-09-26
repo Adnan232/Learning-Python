@@ -1,21 +1,21 @@
-import re
+# import re
 
-inp = input ('Enter File Name: ')
-if len(inp) < 1 : inp = 'test.txt'
+# inp = input ('Enter File Name: ')
+# if len(inp) < 1 : inp = 'test.txt'
 
-fname = open(inp)
-sumNum = 0
-numList = list()
-for line in fname:
-  reqNum = re.findall('([0-9]+)', line)
-  if len(reqNum) < 1: continue
-  newList = list()
-  for num in reqNum:
-    newList.append(int(num))
-  # print (newList)
-  sumNum += sum(newList)
+# fname = open(inp)
+# sumNum = 0
+# numList = list()
+# for line in fname:
+#   reqNum = re.findall('([0-9]+)', line)
+#   if len(reqNum) < 1: continue
+#   newList = list()
+#   for num in reqNum:
+#     newList.append(int(num))
+#   # print (newList)
+#   sumNum += sum(newList)
 
-print(sumNum)
+# print(sumNum)
 
 # import re
 
@@ -34,3 +34,11 @@ print(sumNum)
 #         numlist.append(num)
 
 # print(sum(numlist))
+
+import re
+
+hand = open("mbox.txt")
+for i in hand:
+  line = i.rstrip()
+  if re.search("From:", line):
+    print(line)
