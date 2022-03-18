@@ -8,12 +8,12 @@ for fruit in fruits:
     #     basket[fruit] = basket[fruit] + 1
     basket[fruit] = basket.get(fruit, 0) + 1
 print(basket)
-for key in basket:
-    print(key, basket[key])
+# for key in basket:
+#     print(key, basket[key])
 
-print(basket.keys())
-print(basket.values())
-print(basket.items())
+# print(basket.keys())
+# print(basket.values())
+# print(basket.items())
 
-for k, v in basket.items():
-    print('Key: ', k, 'Value: ', v)
+# for k, v in basket.items():
+#     print('Key: ', k, 'Value: ', v)
